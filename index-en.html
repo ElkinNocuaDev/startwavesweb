@@ -28,14 +28,16 @@
 
 </head>
 
-<!-- Google tag (gtag.js) -->
+<!-- Google Tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-848KYJZLP8"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-848KYJZLP8');
+  // Configura ambas etiquetas
+  gtag('config', 'G-848KYJZLP8');       // Google Analytics
+  gtag('config', 'AW-10898939345');     // Google Ads
 </script>
 
 <body>
@@ -116,7 +118,7 @@
                                 <h3 class="mil-text-gradient-2 mil-mb-20">Send crypto remittances anywhere in the world with near-zero fees</h3>
                                 <h2 class="mil-display mil-text-gradient-3 mil-mb-60">only with <b>StartPay</b>, easy and secure.</h2>
                                 <div class="mil-buttons-frame">
-                                    <a href="https://github.com/ElkinNocuaDev/startwavesweb/releases/download/StartPay/app-release-signed.apk" class="mil-btn mil-md mil-add-arrow" target="_blank" rel="noopener noreferrer">Download</a>
+                                    <a href="https://github.com/ElkinNocuaDev/startwavesweb/releases/download/StartPay/app-release-signed.apk" class="mil-btn mil-md mil-add-arrow" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'conversion', {'send_to': 'AW-10898939345'});">Download</a>
                                     <a href="https://www.youtube.com/watch?v=2m3KCC2VsjU" class="mil-btn mil-md mil-light mil-add-play has-popup-video">Watch Tutorial</a>
                                 </div>
                             </div>
@@ -499,9 +501,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-3">
-                            <a href="#." class="mil-footer-logo mil-mb-60">
-                                <img src="img/logo-3.svg" alt="Plax" width="32" height="32">
-                            </a>
+                            <h6 class="mil-mb-60">Follow Us</h6>
+
+							<!-- Redes sociales -->
+							<div class="mil-social-icons">
+								<a href="https://www.facebook.com/startwavespla" target="_blank"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://x.com/StartWavesPla" target="_blank"><i class="fab fa-twitter"></i></a>
+								<a href="https://www.instagram.com/startwavesof" target="_blank"><i class="fab fa-instagram"></i></a>
+								<a href="https://www.linkedin.com/company/start-waves" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+								<a href="https://www.youtube.com/c/StartWavesAcademy" target="_blank"><i class="fab fa-youtube"></i></a>
+								<a href="https://github.com/ElkinNocuaDev" target="_blank"><i class="fab fa-github"></i></a>
+							</div>
                         </div>
                         <div class="col-xl-3 mil-mb-60">
                             <h6 class="mil-mb-60">Crypto Menu</h6>

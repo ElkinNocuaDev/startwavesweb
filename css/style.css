@@ -2744,3 +2744,20 @@ footer.mil-footer-dark-2 .mil-footer-bottom {
 .mil-subscripe-form-footer button i.mil-dark {
   color: rgb(13, 81, 82);
 }/*# sourceMappingURL=style.css.map */
+
+.mil-social-icons {
+    display: flex;
+    gap: 12px; /* Espaciado entre íconos */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.mil-social-icons a i {
+    font-size: 18px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.mil-social-icons a:hover i {
+    color: #00b894; /* cambia según tu color de marca */
+}
