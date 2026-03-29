@@ -603,6 +603,73 @@
     <!-- plax js -->
     <script src="js/main.js"></script>
 
+
+        <!-- STARTWAVES FUNDING POPUP -->
+<div id="fundingPopup" style="
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+">
+
+  <div style="
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    max-width: 90vw;
+  ">
+
+    <!-- CLOSE -->
+    <span onclick="closePopup()" style="
+      position:absolute;
+      top:10px;
+      right:15px;
+      cursor:pointer;
+      font-size:18px;
+      color:white;
+      z-index:10;
+      opacity:0.8;
+    ">✕</span>
+
+    <a href="https://fund.startwaves.co/" target="_blank">
+      <img src="img/banner_fund.png" style="
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+">
+    </a>
+
+  </div>
+</div>
+
+
+    <script>
+function closePopup(){
+  document.getElementById("fundingPopup").style.display = "none";
+  localStorage.setItem("fundingPopupSeen", "true");
+}
+
+// ⏱ opción 1 (tiempo)
+setTimeout(() => {
+  if(!localStorage.getItem("fundingPopupSeen")){
+    document.getElementById("fundingPopup").style.display = "flex";
+  }
+}, 6000);
+
+// 📜 opción 2 (scroll inteligente)
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 500 && !localStorage.getItem("fundingPopupSeen")){
+    document.getElementById("fundingPopup").style.display = "flex";
+  }
+});
+</script>
+
 </body>
 
 </html>
