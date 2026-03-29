@@ -42,7 +42,7 @@
 		const englishLanguages = ['en', 'en-US', 'en-GB', 'en-CA', 'en-AU', 'en-NZ'];
 
 		// Verificar si el idioma del navegador es inglés y no estamos ya en la versión en inglés
-		if (englishLanguages.some(lang => userLang.startsWith(lang)) {
+		if (englishLanguages.some(lang => userLang.startsWith(lang))) {
 			const currentPath = window.location.pathname;
     
 		// Solo redirigir si no estamos ya en la versión en inglés
@@ -647,6 +647,77 @@
     <script src="js/plugins/magnific-popup.js"></script>
     <!-- plax js -->
     <script src="js/main.js"></script>
+
+
+    <!-- STARTWAVES FUNDING POPUP -->
+<div id="fundingPopup" style="
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+">
+
+  <div style="
+    max-width: 500px;
+    width: 90%;
+    background: linear-gradient(135deg,#0f172a,#020617);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    position: relative;
+    font-family: Arial;
+  ">
+
+    <!-- CLOSE -->
+    <span onclick="closePopup()" style="
+      position:absolute;
+      top:15px;
+      right:20px;
+      cursor:pointer;
+      font-size:20px;
+      opacity:0.6;
+    ">✕</span>
+
+<a href="" target="_blank">
+    <img src="img/banner_fund.png" style="
+  display: block;
+  width: 80%;
+  max-width: 250px;
+  margin: 0 auto 20px auto;
+">
+</a>
+
+  </div>
+</div>
+
+
+    <script>
+function closePopup(){
+  document.getElementById("fundingPopup").style.display = "none";
+  localStorage.setItem("fundingPopupSeen", "true");
+}
+
+// ⏱ opción 1 (tiempo)
+setTimeout(() => {
+  if(!localStorage.getItem("fundingPopupSeen")){
+    document.getElementById("fundingPopup").style.display = "flex";
+  }
+}, 6000);
+
+// 📜 opción 2 (scroll inteligente)
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 500 && !localStorage.getItem("fundingPopupSeen")){
+    document.getElementById("fundingPopup").style.display = "flex";
+  }
+});
+</script>
+
+
 
 </body>
 
